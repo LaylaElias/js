@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calcular(){
+            var qnt1=(document.getElementById('qnt1').value)
+            var preço1=(document.getElementById('preço1').value)
+            var total1=(qnt1*preço1)
+
+            var qnt2=(document.getElementById('qnt2').value)
+            var preço2=(document.getElementById('preço2').value)
+            var total2=(qnt2*preço2)
+
+            var qnt3=(document.getElementById('qnt3').value)
+            var preço3=(document.getElementById('preço3').value)
+            var total3=(qnt3*preço3)
+            
+            var total=(total1+total2+total3)
+            document.getElementById('total').innerHTML=total
+        }
+    </script>
+
+
+    <form action="" method="post">
+        Digite o nome do produto 1: <input type="text" id="name1"><br>
+        Digite a quantidade do produto 1:<input type="text" id="qnt1"><br>
+        Digite o preço do pruduto 1: <input type="text" id="preço1"><br>
+    </form>
+
+    <br>
+    <form action="" method="post">
+        Digite o nome do produto 2: <input type="text" id="name2"><br>
+        Digite a quantidade do produto 2:<input type="text" id="qnt2"><br>
+        Digite o preço do pruduto 2: <input type="text" id="preço2"><br>
+    </form>
+
+    <br>
+    <form action="" method="post">
+        Digite o nome do produto 3: <input type="text" id="name3"><br>
+        Digite a quantidade do produto 3:<input type="text" id="qnt3"><br>
+        Digite o preço do pruduto 3: <input type="text" id="preço3"><br>
+    </form>
+
+    <input type="button" onclick="calcular()" value="Calcular">
+    <h1 id="total"></h1>
+</body>
+</html>

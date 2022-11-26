@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calcular(){
+            var largura=(document.getElementById('largura').value)
+            var comprimento=(document.getElementById('comprimento').value)
+            var resultado=((largura*comprimento*36))
+            document.getElementById('resultado').innerHTML=resultado
+        }
+    </script>
+
+
+    <form>
+        Digite a largura do piso: <input type="text" id="largura"><br><br>
+        Digite o comprimeto do piso: <input type="text" id="comprimento"><br>
+
+        
+    </form>
+    <input type="button" onclick="calcular()" value="Calcular">
+    <h1>Você irá pagar por metro quadrado:</h1>
+    <h2 id="resultado"></h2>
+</body>
+</html>

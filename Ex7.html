@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imagem/png" href="img/l2.png"/>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function verificar(){
+            numeros=document.getElementById("txtNumeros").value
+            numeros=numeros.split(",")
+            var maior = parseInt(numeros[0])
+            for(i=1; i<numeros.length;i++){
+                if(parseInt(numeros[i]) > maior){
+                    maior = parseInt(numeros[i])
+                }
+            }
+            
+            alert("O maior número é "+maior)
+            
+        }
+
+        function verificarmenor(){
+            numeros=document.getElementById("txtNumeros").value
+            numeros=numeros.split(",")
+            var menor = parseInt(numeros[0])
+            for(i=1; i<numeros.length;i++){
+                if(parseInt(numeros[i]) < menor){
+                    menor = parseInt(numeros[i])
+                }
+            }
+            
+            alert("O maior número é "+menor)
+        }
+    </script>
+
+    Numeros<input type="text" id="txtNumeros">
+    <input type="button" value="Qual o maior?" onclick="verificar()">
+    <input type="button" value="Qual o menor?" onclick="verificarmenor()">
+</body>
+</html>

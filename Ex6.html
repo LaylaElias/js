@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calcular()
+        {
+            var sex=document.getElementById('sexo').value;
+            var alt=document.getElementById('altura').value;
+            if (sex == "Feminino" || sex == "feminino"){
+                document.getElementById('resultado').innerHTML=((62.1*alt)-44.7+"Kg");
+            }else if(sex == "Masculino" || sex == "masculino"){
+                document.getElementById('resultado').innerHTML=((72.7*alt)-58+"Kg");
+            }
+        }
+    </script>
+
+    <form action="" method="post">
+        Digite seu sexo: <input type="text" id="sexo"><br><br>
+        Digite sua altura: <input type="text" id="altura" onblur="calcular()"><br>
+
+        <input type="button" onclick="calcular()" value="Calcular">
+    </form>
+    <h1>Seu pesso ideal será:</h1>
+    <h2 id="resultado"></h2>
+</body>
+</html>
